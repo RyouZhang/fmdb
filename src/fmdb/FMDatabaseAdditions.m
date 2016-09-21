@@ -11,7 +11,7 @@
 #import "TargetConditionals.h"
 
 #if FMDB_SQLITE_STANDALONE
-#import <sqlite3/sqlite3.h>
+#import <SecureSqlite/sqlite3.h>
 #else
 #import <sqlite3.h>
 #endif
