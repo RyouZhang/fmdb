@@ -50,7 +50,7 @@ Pod::Spec.new do |s|
   s.subspec 'SecureSqlite' do |ss|
     ss.source_files = 'src/fmdb/FM*.{h,m}'
     ss.exclude_files = 'src/fmdb.m'
-    ss.dependency = 'sqlite3/sqlite3.framework'
+    ss.dependency 'sqlite3/sqlite3.framework'
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DFMDB_SQLITE_STANDALONE -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1' }
   end
   
