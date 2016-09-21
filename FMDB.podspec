@@ -48,7 +48,7 @@ Pod::Spec.new do |s|
 
   # use SecureSqlite and enable -DSQLITE_HAS_CODEC flag
   s.subspec 'SecureSqlite' do |ss|
-    ss.source_files = 'src/fmdb/FM*.{h,m}, sqlite3/*.h'
+    ss.source_files = 'src/fmdb/FM*.{h,m}', 'sqlite3/*.h'
     ss.exclude_files = 'src/fmdb.m'
     ss.resources = 'sqlite3/sqlite3'
     ss.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DFMDB_SQLITE_STANDALONE -DSQLITE_HAS_CODEC -DHAVE_USLEEP=1' }
